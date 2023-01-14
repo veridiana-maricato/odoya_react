@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Sora', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
+}
+
+:root {
+    --cor-clara: #f8f4e3;
+    --cor-1: #9dbebb;
+    --cor-2: #77aca2;
+    --cor-3: #468189;
+    --cor-4: #175375;
+    --cor-destaque: #ffc9b9;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    max-width: 130px;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.menu_principal {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(30deg, var(--cor-3), var(--cor-2));
+}
+
+.menu_principal__lista {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    right: 30px;
+    top: 44%;
+    transform: translate(0, -50%);
+}
+
+.menu_principal__lista a {
+    text-decoration: none;
+    color: var(--cor-clara);
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+.menu_principal__lista a:hover {
+    font-size: 18px;
+    transition: all 200ms ease;
+}
+
+.menu_principal__lista a_principal {
+    color: var(--cor-clara);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu_principal__lista a_principal:hover {
+    font-size: 18px;
+}
