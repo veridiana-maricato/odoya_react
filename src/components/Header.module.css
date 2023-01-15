@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: 'Sora', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap');
 }
@@ -10,7 +10,7 @@
     --cor-3: #468189;
     --cor-4: #175375;
     --cor-destaque: #ffc9b9;
-}
+} */
 
 .logo {
     width: 100px;
