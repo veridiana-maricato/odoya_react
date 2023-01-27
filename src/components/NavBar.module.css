@@ -1,12 +1,12 @@
 .logo {
-    width: 100px;
+    background-image: url(../img/logo_branco.png);
+    background-size: cover;
+    max-width: 130px;
+    height: 80px;
+    margin-left: 40px;
+    padding: 15px;
 }
 
-.logo img {
-    max-width: 130px;
-    margin-left: 30px;
-    padding: 10px;
-}
 
 .menu_principal {
     position: fixed;
@@ -32,20 +32,21 @@
     text-decoration: none;
     color: var(--cor-clara);
     margin-left: 30px;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .menu_principal__lista a:hover {
-    font-size: 18px;
+    scale: 1.05;
     transition: all 200ms ease;
+    color: #fff;
 }
 
 .active {
     color: var(--cor-clara);
     font-weight: bold;
-    font-size: 186px;
 }
 
 .active:hover {
     font-size: 18px;
+    scale: 1;
 }

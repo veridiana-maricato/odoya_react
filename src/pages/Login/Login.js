@@ -1,8 +1,7 @@
 import styles from './Login.module.css'
 
-import { useState, useEffect } from 'react'
-import { AuthErrorCodes } from 'firebase/auth'
-import { useAuthentication } from '../../hooks/useAuthentication'
+import { useState } from 'react'
+
 
 
 const Login = () => {
@@ -11,25 +10,14 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
 
-  const { login, error: authError, loading } = useAuthentication()
+
 
   const handleSubmit = async (e) => {
     e.preventDefault()
   
     setError("")
 
-    const user = { email, password }
-
-
-    const res = await login(user)
-    console.log(res)
   }
-
-  useEffect(() => {
-    if (authError) {
-      setError(authError)
-    }
-  }, [authError])
 
   return (
     <div className={styles.login}>
@@ -44,10 +32,6 @@ const Login = () => {
           <span>Password:</span>
           <input type="password" placeholder='Password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
         </label>       
-        {!loading && <button className='btn'>Log in</button>}
-        {loading && <button className='btn' disabled>Loading...</button>}
-
-        {error && <p className="error">{error}</p>}
       </form>
     </div>
   )

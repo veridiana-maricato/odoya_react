@@ -1,4 +1,6 @@
-import style from './Home.module.css'
+import styles from './Home.module.css'
+
+import { useNavigate } from 'react-router-dom'
 
 // Images
 import colher_img from '../../img/granola/colher2.png'
@@ -15,73 +17,74 @@ const Home = () => {
     const homeText5 = 'Você pode identificar o gosto umami.'
     const homeText6 = 'Uma boa forma de identificar o gosto umami na boca é degustar um dos alimentos pelo qual ele é reconhecido. Saboreie lentamente e espere passar o gosto doce, salgado, azedo ou amargo inicial presente nele. O residual que ficará na boca será o umami. E como ele produz bastante saliva, esse residual tende a permanecer na boca um bom tempo.'
     
+    const navigate = useNavigate()
+
     return (
         <div>
-            <section className={style.home_container}>
-                <div className={style.img_container}>
+            <section className={styles.home_container}>
+                <div className={styles.img_container}>
                     <img src={colher_img} alt="Imagem de uma colher com granola" />
                 </div>
-                <div className={style.title}>
-                    <h1 className={style.home_title}>ODOYÁ</h1>
-                    <h2 className={style.home_subtitle}>Granola doce e salgada</h2>
+                <div className={styles.title}>
+                    <h1 className={styles.home_title}>ODOYÁ</h1>
+                    <h2 className={styles.home_subtitle}>Granola doce e salgada</h2>
                 </div>
             </section>
-            <div className={style.logo_azul}>
+            <div className={styles.logo_azul}>
                 <img src={logo_azul} alt="" />
             </div>
-            <section className={style.sobre_home}>
-                <div className={style.texto_titulo}>
-                    <h1 className={style.titulo_secundario}>Granola doce e salgada</h1>
-                    <p className={style.texto_home}>{homeText1}</p>
-                    <p className={style.texto_home2}>{homeText2}</p>
-                    <p className={style.texto_home3}>{homeText3}</p>
-                    <p className={style.texto_home}>{homeText4}</p>
-                    <p className={style.texto_home3}>{homeText5}</p>                        
-                    <p className={style.texto_home}>{homeText6}</p>                        
-                    
+            <section className={styles.sobre_home}>
+                <div className={styles.texto_titulo}>
+                    <h1 className={styles.titulo_secundario}>Granola doce e salgada</h1>
+                    <p className={styles.texto_home}>{homeText1}</p>
+                    <p className={styles.texto_home2}>{homeText2}</p>
+                    <p className={styles.texto_home3}>{homeText3}</p>
+                    <p className={styles.texto_home}>{homeText4}</p>
+                    <p className={styles.texto_home3}>{homeText5}</p>                        
+                    <p className={styles.texto_home}>{homeText6}</p> 
                 </div>
-                <img src={mesa_img} alt="" />
-                <a className={style.btn} href="/pedido.html">Peça já a sua!</a>
+                <img src={mesa_img} alt="Mesa posta com bowl de granola, yogurt e frutas vermelhas" />
+                <button onClick={() => navigate('/order')}>Peça já a sua!</button>
             </section> 
             {/* <!-- Depoimentos --> */}
-            {/* <section className={style.depoimentos}>
-                <h2 className={style.depoimentos__titulo}>Depoimentos</h2>
-                <button className={style.arrow-left control" aria-label="Previous}> '<' </button>
-                <button id="arrow-right" className={style.arrow-right control" aria-label="Next}>></button>
-                <div className={style.depoimentos__caixa}>
-                    <div className={style.depoimentos__lista}>
-                        <div className={style.depoimentos__lista__3em3}>
-                            <section className={style.depoimentos__item depoimentos__item__current}>                            
+            {/* <section className={styles.depoimentos}>
+                <h2 className={styles.depoimentos__titulo}>Depoimentos</h2>
+                <button className={styles.arrow-left control" aria-label="Previous}> '<' </button>
+                <button id="arrow-right" className={styles.arrow-right control" aria-label="Next}>></button>
+                <div className={styles.depoimentos__caixa}>
+                    <div className={styles.depoimentos__lista}>
+                        <div className={styles.depoimentos__lista__3em3}>
+                            <section className={styles.depoimentos__item depoimentos__item__current}>                            
                                 <img src={estrelas} alt="Cinco estrelas}>
-                                <p className={style.depoimentos__texto}>A melhor granola que já comi!</p>
-                                <p className={style.depoimentos__pessoa}>Marina C.</p>
+                                <p className={styles.depoimentos__texto}>A melhor granola que já comi!</p>
+                                <p className={styles.depoimentos__pessoa}>Marina C.</p>
                             </section>
-                            <section className={style.depoimentos__item depoimentos__item__current}>
+                            <section className={styles.depoimentos__item depoimentos__item__current}>
                                 <img src="img/estrelas.png" alt="Cinco estrelas}>
-                                <p className={style.depoimentos__texto}>A Uma delícia!</p>
-                                <p className={style.depoimentos__pessoa}>Marina F.</p>
+                                <p className={styles.depoimentos__texto}>A Uma delícia!</p>
+                                <p className={styles.depoimentos__pessoa}>Marina F.</p>
                             </section>
-                            <section className={style.depoimentos__item depoimentos__item__current}>
+                            <section className={styles.depoimentos__item depoimentos__item__current}>
                                 <img src="img/estrelas.png" alt="Cinco estrelas}>
-                                <p className={style.depoimentos__texto}>Perfeita!</p>
-                                <p className={style.depoimentos__pessoa}>Giuliana S.</p>
+                                <p className={styles.depoimentos__texto}>Perfeita!</p>
+                                <p className={styles.depoimentos__pessoa}>Giuliana S.</p>
                             </section>   
                         </div>
-                        <div className={style.depoimentos__lista__3em3}>
-                            <section className={style.depoimentos__item depoimentos__item__current}>
+                        <div className={styles.depoimentos__lista__3em3}>
+                            <section className={styles.depoimentos__item depoimentos__item__current}>
                                 <img src="img/estrelas.png" alt="Cinco estrelas}>
-                                <p className={style.depoimentos__texto}>Bótima</p>
-                                <p className={style.depoimentos__pessoa}>Juliana S.</p>
+                                <p className={styles.depoimentos__texto}>Bótima</p>
+                                <p className={styles.depoimentos__pessoa}>Juliana S.</p>
                             </section>   
-                            <section className={style.depoimentos__item depoimentos__item__current}>
+                            <section className={styles.depoimentos__item depoimentos__item__current}>
                                 <img src="img/estrelas.png" alt="Cinco estrelas}>
-                                <p className={style.depoimentos__texto}>Perfeita!</p>
-                                <p className={style.depoimentos__pessoa}>Giuliana S.</p>
+                                <p className={styles.depoimentos__texto}>Perfeita!</p>
+                                <p className={styles.depoimentos__pessoa}>Giuliana S.</p>
                             </section>   
-                            <section className={style.depoimentos__item depoimentos__item__current}>
+                            <section className={styles.depoimentos__item depoimentos__item__current}>
                                 <img src="img/estrelas.png" alt="Cinco estrelas}>
-                                <p className={style.depoimentos__texto}>Bótima</p>
-                                <p className={style.depoimentos__pessoa}>Juliana S.</p>
+                                <p className={styles.depoimentos__texto}>Bótima</p>
+                                <p className={styles.depoimentos__pessoa}>Juliana S.</p>
                             </section>   
                         </div>
                     </div>

@@ -37,4 +37,5 @@ button{
 button:hover{
   transition: all 150ms ease-in-out;
   background-color: var(--cor-2);
+  cursor: pointer;
 }

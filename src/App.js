@@ -24,7 +24,7 @@ import Register from './pages/Register/Register';
 
 function App() {
 
-  // const [user, setUser] = useState(undefined)
+  const [user, setUser] = useState(undefined)
   // const { auth } = useAuthentication()
 
   // const loadingUser = user === undefined
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <AuthProvider value={{ user }}> */}
+      <AuthProvider value={user} >
         <BrowserRouter>
           <NavBar />
           <div className="container">
@@ -51,15 +51,13 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/order' element={<Order />} />
             <Route path='/recepies' element={<Recepies />} />
-            {/* <Route path='/login' element={!user ? <Login /> : <Navigate to='/' />} /> */}
-            {/* <Route path='/register' element={!user ? <Register /> : <Navigate to='/' />} /> */}
+            <Route path='/login' element={!user ? <Login /> : <Navigate to='/' />} />
+            <Route path='/register' element={!user ? <Register /> : <Navigate to='/' />} />
           </Routes>
           </div>
+          <Footer />
         </BrowserRouter>
-      {/* </AuthProvider> */}
-      <h1>teste</h1>
-
-
+      </AuthProvider>
     </div>
   );
 }

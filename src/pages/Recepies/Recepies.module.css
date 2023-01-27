@@ -1,8 +1,8 @@
-.cover__image_receitas{
+.cover_recepies{
     background-image: url(../../img/granola/bolacha.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;    
+    height: 120vh;    
     max-width: 100%;
     position: absolute;
     top:110px;
@@ -10,11 +10,11 @@
     left: 0;
 }
 
-h1{
+.cover_recepies h1{
     color: rgba(248, 244, 227, 0.9);  
     font-size: 140px;
     font-weight: lighter; 
-    margin-bottom: -60px;
+    margin-bottom: -50px;
     margin-top: 40px;
     margin-left: 30px;
 }
