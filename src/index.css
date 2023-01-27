@@ -28,7 +28,7 @@ button{
   color:  var(--cor-clara);
   padding: 8px 30px 8px 30px;
   border-radius: 5px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-weight: bold;
   border: none;
   font-size: 16px;

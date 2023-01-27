@@ -7,46 +7,102 @@
     padding: 15px;
 }
 
-
-.menu_principal {
+.navbar {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 10;
     height: 110px;
-    background: linear-gradient(30deg, var(--cor-3), var(--cor-2));
+    background: var(--cor-3);
+    /* background: linear-gradient(30deg, var(--cor-3), var(--cor-2)); */
 }
 
-.menu_principal__lista {
-    list-style-type: none;
+.nav_links{
+    list-style: none;
     display: flex;
     justify-content: right;
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translate(0, -50%);
+    margin-right: 40px;
+    margin-top: -60px;
+    color: var(--cor-clara);
+
 }
 
-.menu_principal__lista a {
+.nav_link {
     text-decoration: none;
     color: var(--cor-clara);
-    margin-left: 30px;
     font-size: 18px;
+    padding-left: 30px;
 }
 
-.menu_principal__lista a:hover {
+.nav_link:hover {
     scale: 1.05;
     transition: all 200ms ease;
     color: #fff;
 }
 
 .active {
-    color: var(--cor-clara);
+    color: #fff;
     font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: default;
+    padding-left: 30px;
 }
 
-.active:hover {
-    font-size: 18px;
-    scale: 1;
+.hidden{
+    display: none;
+}
+
+.mobile_menu_icon{
+    display: none;
+}
+
+@media screen and (max-width: 780px){
+
+    .logo{
+        width: 200px;
+        padding: 10px;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav_links{
+        display: none;
+    }
+
+    .nav_links_mobile{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 280px;
+        list-style: none;
+        background-color: var(--cor-2);
+        left: 0;
+        right: 0;
+        top: 90px;
+        transition: all 200ms ease-in-out;
+        width: 100vw;
+    }
+    .nav_link:hover{
+        scale: 1;
+        font-weight: bold;
+        transition: all 300ms ease-in-out;
+    }
+
+    .mobile_menu_icon{
+        background-color: var(--cor-3);
+        display: flex;   
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: var(--cor-clara);  
+        height: 100%;
+        width: 100px;
+        border-radius: 0;
+    }
 }
