@@ -1,12 +1,20 @@
 import style from './Home.module.css'
 
 // Images
-import colher_img from './img/granola/colher2.png'
-import mesa_img from './img/granola/mesa-linda.jpg'
+import colher_img from '../../img/granola/colher2.png'
+import mesa_img from '../../img/granola/mesa-linda.jpg'
 // import estrelas from './img/estrelas.png'
-import logo_azul from './img/logo-azul.png'
+import logo_azul from '../../img/logo-azul.png'
 
 const Home = () => {
+
+    const homeText1 = 'A Odoyá Cozinha é uma experiência. É a pausa pro alimento do corpo, mente e espírito. É um despertar para o nutrir-se. É mais que comida, é uma porta que se abre para as sensações e para uma nova forma de experienciar a vida.'
+    const homeText2 = 'Cozinha Odoyá é amor em forma de alimento. Axé.'
+    const homeText3 = 'Gosto e o sabor não é a mesma coisa.'
+    const homeText4 = 'Por mais que pareçam, são diferentes. O gosto, segundo especialistas, refere-se apenas ao sentido do paladar. Receptores específicos presentes na língua reconhecem um determinado estímulo proporcionado por substâncias presentes nos alimentos. Já o sabor dos alimentos é reconhecido pela combinação de dois ou mais sentidos: o paladar (que se refere ao gosto) e mais algum outro sentido, que pode ser o olfato (que dá o aroma dos alimentos). Na prática, é assim: coloque um pedaço de chocolate na boca e segure o nariz. Tente identificar o sabor. Você notará que, com o nariz tampado, sentirá somente o gosto doce. Ao liberar o olfato, você então será capaz de notar o sabor do doce. Essa é a diferença.'
+    const homeText5 = 'Você pode identificar o gosto umami.'
+    const homeText6 = 'Uma boa forma de identificar o gosto umami na boca é degustar um dos alimentos pelo qual ele é reconhecido. Saboreie lentamente e espere passar o gosto doce, salgado, azedo ou amargo inicial presente nele. O residual que ficará na boca será o umami. E como ele produz bastante saliva, esse residual tende a permanecer na boca um bom tempo.'
+    
     return (
         <div>
             <section className={style.home_container}>
@@ -24,18 +32,17 @@ const Home = () => {
             <section className={style.sobre_home}>
                 <div className={style.texto_titulo}>
                     <h1 className={style.titulo_secundario}>Granola doce e salgada</h1>
-                    <p className={style.texto_home}>A Odoyá Cozinha é uma experiência. É a pausa pro alimento do corpo, mente e espírito. É um despertar para o nutrir-se. É mais que comida, é uma porta que se abre para as sensações e para uma nova forma de experienciar a vida.</p>
-                    <p className={style.texto_home2}>Cozinha Odoyá é amor em forma de alimento. Axé.</p>
-                    <p className={style.texto_home}><b className={style.texto_home3}>Gosto e o sabor não é a mesma coisa.</b>
-
-                        Por mais que pareçam, são diferentes. O gosto, segundo especialistas, refere-se apenas ao sentido do paladar. Receptores específicos presentes na língua reconhecem um determinado estímulo proporcionado por substâncias presentes nos alimentos. Já o sabor dos alimentos é reconhecido pela combinação de dois ou mais sentidos: o paladar (que se refere ao gosto) e mais algum outro sentido, que pode ser o olfato (que dá o aroma dos alimentos). Na prática, é assim: coloque um pedaço de chocolate na boca e segure o nariz. Tente identificar o sabor. Você notará que, com o nariz tampado, sentirá somente o gosto doce. Ao liberar o olfato, você então será capaz de notar o sabor do doce. Essa é a diferença.
-                        <b className={style.texto_home3}>Você pode identificar o gosto umami.</b>
-                        Uma boa forma de identificar o gosto umami na boca é degustar um dos alimentos pelo qual ele é reconhecido. Saboreie lentamente e espere passar o gosto doce, salgado, azedo ou amargo inicial presente nele. O residual que ficará na boca será o umami. E como ele produz bastante saliva, esse residual tende a permanecer na boca um bom tempo
-                    </p>
+                    <p className={style.texto_home}>{homeText1}</p>
+                    <p className={style.texto_home2}>{homeText2}</p>
+                    <p className={style.texto_home3}>{homeText3}</p>
+                    <p className={style.texto_home}>{homeText4}</p>
+                    <p className={style.texto_home3}>{homeText5}</p>                        
+                    <p className={style.texto_home}>{homeText6}</p>                        
+                    
                 </div>
                 <img src={mesa_img} alt="" />
                 <a className={style.btn} href="/pedido.html">Peça já a sua!</a>
-            </section> */}
+            </section> 
             {/* <!-- Depoimentos --> */}
             {/* <section className={style.depoimentos}>
                 <h2 className={style.depoimentos__titulo}>Depoimentos</h2>
