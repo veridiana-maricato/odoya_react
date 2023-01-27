@@ -17,7 +17,7 @@ footer {
 }
 
 
-.footer__logo{
+.footer__logo {
     background-image: url(../img/logo_branco.png);
     background-size: cover;
     min-height: 140px;
@@ -32,13 +32,15 @@ footer {
     margin-left: -40px;
 }
 
-.footer__list a, .footer__list p {
+.footer__list a,
+.footer__list p {
     text-decoration: none;
     color: var(--cor-clara);
     cursor: pointer;
 }
 
-.footer__list a:hover, .footer__list p:hover {
+.footer__list a:hover,
+.footer__list p:hover {
     text-decoration: underline;
 }
 
@@ -48,4 +50,17 @@ footer {
     font-size: 13px;
     text-align: center;
     padding: 1px;
+}
+
+@media screen and (max-width: 780px) {
+    .footer__line1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 800px;
+    }
+
+    .footer__logo {
+        max-height: 140px;
+    }
 }

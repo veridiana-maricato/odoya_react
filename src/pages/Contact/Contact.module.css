@@ -11,7 +11,7 @@ form{
     background: rgba(23, 83, 117, 0.7);
     height: 60vh;
     width: 70vw;
-    border-radius: 5px;
+    border-radius: 9px;
 }
 
 label{
@@ -31,6 +31,7 @@ label{
     background-position: left center;
     height: 100vh;    
     position: relative;
+    margin-bottom: -80px;
 }
 
 input{
@@ -40,4 +41,5 @@ input{
 
 textarea{
     width: 45vw;
+    margin-bottom: 30px;
 }

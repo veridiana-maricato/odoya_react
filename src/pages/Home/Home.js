@@ -21,30 +21,22 @@ const Home = () => {
 
     return (
         <div>
-            <section className={styles.home_container}>
-                <div className={styles.img_container}>
-                    <img src={colher_img} alt="Imagem de uma colher com granola" />
-                </div>
-                <div className={styles.title}>
-                    <h1 className={styles.home_title}>ODOYÁ</h1>
-                    <h2 className={styles.home_subtitle}>Granola doce e salgada</h2>
-                </div>
-            </section>
-            <div className={styles.logo_azul}>
-                <img src={logo_azul} alt="" />
+            <div className={styles.cover_home}>
+            <h1>ODOYÁ</h1>
+            <h2>Granola doce e salgada</h2>
+
             </div>
-            <section className={styles.sobre_home}>
-                <div className={styles.texto_titulo}>
-                    <h1 className={styles.titulo_secundario}>Granola doce e salgada</h1>
-                    <p className={styles.texto_home}>{homeText1}</p>
-                    <p className={styles.texto_home2}>{homeText2}</p>
-                    <p className={styles.texto_home3}>{homeText3}</p>
-                    <p className={styles.texto_home}>{homeText4}</p>
-                    <p className={styles.texto_home3}>{homeText5}</p>                        
-                    <p className={styles.texto_home}>{homeText6}</p> 
-                </div>
-                <img src={mesa_img} alt="Mesa posta com bowl de granola, yogurt e frutas vermelhas" />
-                <button onClick={() => navigate('/order')}>Peça já a sua!</button>
+            <div className={styles.logo_blue}></div>            
+            <section className={styles.about_home}>
+                    <h1 className={styles.home_subtitle}>Granola doce e salgada</h1>
+                    <p className={styles.text_home}>{homeText1}</p>
+                    <p className={styles.text_home2}>{homeText2}</p>
+                    <p className={styles.text_home3}>{homeText3}</p>
+                    <p className={styles.text_home}>{homeText4}</p>
+                    <p className={styles.text_home3}>{homeText5}</p>                        
+                    <p className={styles.text_home}>{homeText6}</p>         
+                <img className={styles.granola_img} src={mesa_img} alt="Mesa posta com bowl de granola, yogurt e frutas vermelhas" />
+                <button className={styles.order_btn} onClick={() => navigate('/order')}>Peça já a sua!</button>
             </section> 
             {/* <!-- Depoimentos --> */}
             {/* <section className={styles.depoimentos}>
