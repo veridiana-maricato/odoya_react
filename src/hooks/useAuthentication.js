@@ -81,15 +81,14 @@ import {
       } catch (error) {
         let systemErrorMessage
         if (error.message.includes('user-not-found')) {
-          systemErrorMessage = "User not found."
+          systemErrorMessage = "Usuário não encontrado."
         } else if (error.message.includes('wrong-password')) {
-          systemErrorMessage = "Incorrect password"
+          systemErrorMessage = "Senha incorreta"
         } else {
-          systemErrorMessage = "An error has occurred. Try again later."
+          systemErrorMessage = "Ocorreu um erro. Tente novamente mais tarde."
         }
         setError(systemErrorMessage)
-        setLoading(false)
-  
+        setLoading(false)  
       }
     }
   

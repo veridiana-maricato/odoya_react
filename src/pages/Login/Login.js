@@ -1,7 +1,9 @@
 import styles from './Login.module.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+import { useAuthentication } from '../../hooks/useAuthentication'
 
 
 
@@ -11,6 +13,9 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
 
+  const { login, error: authError, loading } = useAuthentication()
+
+
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
@@ -18,7 +23,20 @@ const Login = () => {
   
     setError("")
 
+    const user = {
+      email,
+      password
+    }
+
+    const res = await login(user)
+    console.log(res)
   }
+
+  useEffect(() => {
+    if (authError) {
+      setError(authError)
+    }
+  }, [authError])
 
   return (
     <div className={styles.login}>       
@@ -32,8 +50,14 @@ const Login = () => {
           <span>Senha:</span>
           <input type="password" placeholder='Password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
         </label>      
-        <button>Entrar</button>
-        <p className='text-button ' onClick={() => navigate('/register')}>Ainda não tem cadastro? Clique aqui!</p>
+        {!loading && (
+          <>
+            <button>Entrar</button>
+            <p className='text-button' onClick={() => navigate('/login')}>Já tem cadastro? Faça login!</p>
+          </>
+        )}
+        {loading && <button disabled>Aguarde...</button>}
+        {error && <p className='error-message'>{error}</p>}
       </form>
     </div>
   )
