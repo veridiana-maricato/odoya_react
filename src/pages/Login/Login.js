@@ -53,7 +53,7 @@ const Login = () => {
         {!loading && (
           <>
             <button>Entrar</button>
-            <p className='text-button' onClick={() => navigate('/login')}>Não tem cadastro ainda? Clique aqui!</p>
+            <p className='text-button' onClick={() => navigate('/register')}>Não tem cadastro ainda? Clique aqui!</p>
           </>
         )}
         {loading && <button disabled>Aguarde...</button>}
