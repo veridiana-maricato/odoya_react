@@ -1,5 +1,8 @@
 .register h1, .register p{
     text-align: center;
+}
+
+.register h1{
     color: var(--cor-clara);
 }
 

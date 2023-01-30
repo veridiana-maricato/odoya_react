@@ -41,6 +41,19 @@ button:hover {
   cursor: pointer;
 }
 
+.logout_btn{
+  font-size: 18px;
+  padding-left: 30px;
+  margin-top: 0;
+}
+
+.logout_btn:hover{
+  scale: 1.05;
+  transition: all 200ms ease;
+  color: rgb(252, 158, 158);
+  cursor: pointer;
+}
+
 /* form */
 form {
   display: flex;
@@ -88,6 +101,14 @@ textarea {
   cursor: pointer;
 }
 
-.hidden{
+.hidden {
   display: none;
+}
+
+.error-message {
+  background-color: rgba(192, 34, 34, 0.6);
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 5px;
+  color: var(--cor-clara);
 }

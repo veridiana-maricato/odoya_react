@@ -28,38 +28,39 @@ import Payment from './pages/Payment/Payment';
 function App() {
 
   const [user, setUser] = useState(undefined)
-  // const { auth } = useAuthentication()
+  const { auth } = useAuthentication()
 
-  // const loadingUser = user === undefined
+  const loadingUser = user === undefined
 
-  // useEffect(() => {
-  //   onAuthStateChanged(auth, (user) => {
-  //     setUser(user)
-  //   })
+  // user will no longer be undefined
+  // user will become new user || user will come as false
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user)
+    })
+  }, [auth])
 
-  // }, [auth])
-
-  // if (loadingUser) {
-  //   return <p>Carregando...</p>
-  // }
+  if (loadingUser) {
+    return <p>Carregando...</p>
+  }
 
   return (
     <div className="App">
-      <AuthProvider value={user} >
+      <AuthProvider value={{ user }} >
         <BrowserRouter>
           <NavBar />
           <div className="container">
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/order' element={<Order />} />
-            <Route path='/recepies' element={<Recepies />} />
-            <Route path='/cart' element={<Cart />} />
-            <Route path='/cart/adress' element={<Adress />} />
-            <Route path='/cart/payment' element={<Payment />} />
-            <Route path='/login' element={!user ? <Login /> : <Navigate to='/' />} />
-            <Route path='/register' element={!user ? <Register /> : <Navigate to='/' />} />
-          </Routes>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/order' element={<Order />} />
+              <Route path='/recepies' element={<Recepies />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/cart/adress' element={<Adress />} />
+              <Route path='/cart/payment' element={<Payment />} />
+              <Route path='/login' element={!user ? <Login /> : <Navigate to='/' />} />
+              <Route path='/register' element={!user ? <Register /> : <Navigate to='/' />} />
+            </Routes>
           </div>
           <Footer />
         </BrowserRouter>
