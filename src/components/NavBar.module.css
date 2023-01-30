@@ -50,6 +50,7 @@
     padding-left: 30px;
 }
 
+
 .hidden {
     display: none;
 }
@@ -58,7 +59,7 @@
     display: none;
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
 
     .logo {
         width: 200px;

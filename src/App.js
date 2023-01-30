@@ -21,6 +21,9 @@ import Recepies from './pages/Recepies/Recepies';
 import Order from './pages/Order/Order';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Cart from './pages/Cart/Cart';
+import Adress from './pages/Adress/Adress';
+import Payment from './pages/Payment/Payment';
 
 function App() {
 
@@ -51,6 +54,9 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/order' element={<Order />} />
             <Route path='/recepies' element={<Recepies />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/cart/adress' element={<Adress />} />
+            <Route path='/cart/payment' element={<Payment />} />
             <Route path='/login' element={!user ? <Login /> : <Navigate to='/' />} />
             <Route path='/register' element={!user ? <Register /> : <Navigate to='/' />} />
           </Routes>

@@ -1,0 +1,63 @@
+.img_container{
+    background-image: url(../../img/granola/forno.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -90px;
+}
+
+.cart_container{
+    background-color: rgba(23, 83, 117, 0.86) ; 
+    color: var(--cor-clara);
+    padding: 50px;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 500px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+
+}
+
+.cart_container h1{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    align-items: center;
+}
+
+.cart_buttons{
+    display: flex; 
+    height: 30px;
+}
+
+.cart_buttons button{
+    border-radius: 0;
+    background-color: brown;
+}
+
+.cart_buttons button:hover{
+    border-radius: 0;
+    background-color: hsl(0, 76%, 45%);
+}
+
+.cart_buttons input{
+    width: 50px;
+    text-align: center;
+}
+
+.finalize_btn{
+   margin-left: 50%;
+   transform: translate(-50%, 0%);
+   margin-top: 60px;
+   
+}
+
+.finalize_btn:hover{
+    background-color: rgb(100, 139, 100);
+}

@@ -1,0 +1,97 @@
+.img_container {
+    background-image: url(../../img/granola/forno.jpg);
+    background-size: cover;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -90px;
+    background-color: red;
+}
+
+.img_container form {
+    background-color: rgba(23, 83, 117, 0.86);
+    color: var(--cor-clara);
+    padding: 50px;
+    margin-top: 150px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    max-width: 70vw;
+}
+
+.img_container label{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.subtitle{
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 80px;
+}
+
+.cpf{
+    margin-top: -20px;
+    width: 100%;
+}
+
+.cpf input{
+    width: 100%;
+}
+
+.cep {
+    width: 30%
+}
+
+.street {
+    width: 60%
+}
+
+.streetNumber{
+    width: 15%
+}
+
+.complement{
+    width: 35%;
+}
+
+.neighborhood{
+    width: 40%;
+}
+
+.city{
+    width: 45%;
+}
+.state{
+    width: 45%;
+}
+
+.submit_btn{
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 900px){
+    .img_container label{
+        width: 100%;
+        margin: 0;
+    }
+    .img_container input{
+        width: 100%;
+        margin: 0;
+    }
+    .img_container {
+        min-height: 150vh;
+    }
+    .img_container form{
+        margin-top: 300px;
+    }
+}

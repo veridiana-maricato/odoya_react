@@ -18,15 +18,15 @@ body {
   box-sizing: border-box;
 }
 
-*{
+* {
   font-family: 'Sora', sans-serif;
   max-width: 100%;
 }
 
 /* buttons */
-button{
+button {
   background-color: var(--cor-3);
-  color:  var(--cor-clara);
+  color: var(--cor-clara);
   padding: 8px 30px 8px 30px;
   border-radius: 5px;
   /* margin-top: 20px; */
@@ -35,8 +35,59 @@ button{
   font-size: 16px;
 }
 
-button:hover{
+button:hover {
   transition: all 150ms ease-in-out;
   background-color: var(--cor-2);
   cursor: pointer;
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(23, 83, 117, 0.7);
+  width: 70vw;
+  border-radius: 9px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  color: var(--cor-clara);
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input {
+  width: 45vw;
+  height: 25px;
+}
+
+textarea {
+  width: 45vw;
+  margin-bottom: 30px;
+}
+
+.text-button {
+  color: var(--cor-clara);
+}
+
+.text-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
 }
